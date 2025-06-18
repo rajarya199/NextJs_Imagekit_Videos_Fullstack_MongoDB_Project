@@ -1,16 +1,19 @@
 @import "tailwindcss";
 
-/* :root {
+ :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+ @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+} 
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -23,4 +26,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-} */
+} 
+
+@utility wrapper{
+      @apply max-w-7xl lg:mx-auto p-5 md:px-10 xl:px-5 w-full;
+}
