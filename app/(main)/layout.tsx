@@ -5,7 +5,10 @@ const Layout=async({children}:{children:React.ReactNode})=>{
     return (
          <main className="w-full min-h-screen bg-gray-50">
       <Navbar />
-     {children}
+      <div className='wrapper'>
+   {children}
+      </div>
+  
     </main>
 
     )
