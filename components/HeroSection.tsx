@@ -10,8 +10,7 @@ import {
 } from 'lucide-react'
 import Button from './Button'
 import { useTheme } from 'next-themes'
-
-// import VideoPreview from './VideoPreview'
+import VideoPreview from './VideoPreview'
 const HeroSection = () => {
   const { theme } = useTheme()
   return (
@@ -97,7 +96,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-            {/* <VideoPreview /> */}
+            <VideoPreview />
           </div>
         </div>
       </div>
