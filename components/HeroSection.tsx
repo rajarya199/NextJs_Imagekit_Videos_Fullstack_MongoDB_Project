@@ -2,10 +2,10 @@
 import React from 'react'
 import {
   UploadIcon,
-  WandIcon,
-  LayoutGridIcon,
-  PlayIcon,
-  PauseIcon,
+//   WandIcon,
+//   LayoutGridIcon,
+//   PlayIcon,
+//   PauseIcon,
   CheckIcon,
 } from 'lucide-react'
 import Button from './Button'
