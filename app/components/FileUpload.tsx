@@ -61,7 +61,7 @@ if(!file || !validateFile(file))return
 setUploading(true)
 setError(null)
 try{
- const authRes=await fetch("api/auth/imagekit-auth")
+ const authRes=await fetch("api/imagekit-auth")
  const auth=await authRes.json()
  const res= await upload({
     file,
