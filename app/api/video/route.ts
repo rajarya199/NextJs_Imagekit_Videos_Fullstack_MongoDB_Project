@@ -27,7 +27,7 @@ export async function POST(request:NextRequest){
         //check if the user is authenticated
 const session=await getServerSession(authOptions)
 if(!session){
-       console.error("Error fetching videos:");
+       console.error("unauthorized user");
         return NextResponse.json(
             { error:"unauthorized user" },
             {status:401}
@@ -53,6 +53,8 @@ const videoData={
     ...body,
     controls: body?.controls ?? true,
     transformations:{
+        //  width: body.transformation?.width ?? 1080,
+        // height: body.transformation?.height ?? 1920,
         height:1920,
         width:1080,
         quality:body.transformation?.quality ?? 100
