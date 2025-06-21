@@ -40,6 +40,7 @@ export const authOptions:NextAuthOptions={
             }
             catch(error){
                 console.error("auth error",error)
+                    return null;
 
             }
         }
