@@ -65,6 +65,7 @@ const FileUploads = ({ onSuccess, onProgress, fileType = "image" }: FileUploadPr
           }
         },
       });
+      console.log("video data :",res)
 setUploadedUrl(res.url ?? "");
 
       setFileName(file.name);
