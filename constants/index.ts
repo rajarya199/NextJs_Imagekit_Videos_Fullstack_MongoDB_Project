@@ -4,6 +4,10 @@ export const menuItem=[
         path:'/'
     },
      {
+        label:'Gallery',
+        path:'/gallery'
+    },
+     {
         label:"Features",
         path:"/"
     },

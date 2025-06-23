@@ -3,7 +3,7 @@ import React from 'react'
 
 const Layout=async({children}:{children:React.ReactNode})=>{
     return (
-         <main className="w-full min-h-screen bg-gray-50">
+         <main className="w-full min-h-screen bg-gray-50 dark:bg-gray-950">
       <Navbar />
       <div >
    {children}
