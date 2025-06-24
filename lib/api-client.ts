@@ -29,11 +29,11 @@ class ApiClient{
     }
 
     async getVideos(){
-        return this.fetch("/videos")
+        return this.fetch("/video")
     }
 
     async createVideo(videoData:VideoFormData){
-        return this.fetch("/videos",{
+        return this.fetch("/video",{
             method:"POST",
             body:videoData
         })
@@ -41,7 +41,7 @@ class ApiClient{
 
     async getVideoById(id:string){
           if (!id) throw new Error("Video ID is required");
-    return this.fetch<IVideo>(`/videos/${id}`);
+    return this.fetch<IVideo>(`/video/${id}`);
     }
 }
 export const apiClient = new ApiClient();
