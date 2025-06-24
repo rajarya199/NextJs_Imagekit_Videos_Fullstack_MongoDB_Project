@@ -41,17 +41,12 @@ const VideoGallery: React.FC = () => {
   if (error) return <p className="text-center py-10 text-red-600">{error}</p>;
 
   return (
-    <div className="grid gap-6 p-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+   
+    <div className="grid gap-6 p-6  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 ]">
+      {/* grid-cols-[repeat(auto-fit,minmax(250px,1fr)) */}
       {videos.map((video) => (
-        <VideoCard
-          key={video._id}
-          title={video.title}
-          description={video.description}
-          videoUrl={video.videoUrl}
-          thumbnailUrl={video.thumbnailUrl}
-          controls={video.controls}
-          width={video.transformation?.width}
-          height={video.transformation?.height}
+        <VideoCard key={video._id}
+        video={video}
         />
       ))}
     </div>
