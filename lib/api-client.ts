@@ -38,5 +38,10 @@ class ApiClient{
             body:videoData
         })
     }
+
+    async getVideoById(id:string){
+          if (!id) throw new Error("Video ID is required");
+    return this.fetch<IVideo>(`/videos/${id}`);
+    }
 }
 export const apiClient = new ApiClient();
