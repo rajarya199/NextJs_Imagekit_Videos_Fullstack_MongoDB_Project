@@ -139,7 +139,7 @@ setUploadedUrl(res.url ?? "");
       ) : (
         <div
           ref={dropZoneRef}
-          className="border-2 border-dashed border-gray-300 rounded-xl p-10 text-center cursor-pointer transition-all duration-200 hover:border-indigo-400 hover:bg-indigo-50"
+          className="border-2 border-dashed border-gray-300 rounded-xl p-10 text-center cursor-pointer transition-all duration-200 hover:border-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950"
           onClick={() => fileInputRef.current?.click()}
           onDrop={handleDrop}
           onDragOver={handleDragOver}
@@ -155,10 +155,10 @@ setUploadedUrl(res.url ?? "");
             </div>
           </div>
 
-          <p className="text-lg font-medium text-gray-900 mb-1">
+          <p className="text-lg font-medium text-gray-900 dark:text-gray-200 mb-1">
             Drag and drop your {fileType} here
           </p>
-          <p className="text-sm text-gray-500 mb-4">or click to select a file</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">or click to select a file</p>
 
           <input
             ref={fileInputRef}

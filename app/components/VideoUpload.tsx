@@ -114,22 +114,22 @@ const VideoUpload = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-16">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">
-          <button className="flex items-center space-x-2 text-gray-600 hover:text-indigo-600 mb-4 transition-colors">
+          <button className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-indigo-600 mb-4 transition-colors">
             <ArrowLeft className="h-5 w-5" />
             <span>Back to Home</span>
           </button>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Upload Your Video</h1>
-          <p className="text-gray-600">Share your creativity with the world</p>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">Upload Your Video</h1>
+          <p className="text-gray-600 dark:text-gray-300">Share your creativity with the world</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-8">
           {/* Video Upload Section */}
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+          <div className="bg-white dark:bg-primary-500 rounded-2xl shadow-lg p-8">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-6 flex items-center">
               <Video className="h-6 w-6 mr-2 text-indigo-600" />
               Video File
             </h2>
@@ -167,8 +167,8 @@ const VideoUpload = () => {
           </div>
 
           {/* Thumbnail Upload Section */}
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+          <div className="bg-white dark:bg-primary-500 rounded-2xl shadow-lg p-8">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-6 flex items-center">
               <ImageIcon className="h-6 w-6 mr-2 text-indigo-600" />
               Thumbnail Image
             </h2>
@@ -202,8 +202,8 @@ const VideoUpload = () => {
               </div>
 
               <div className="space-y-4">
-                <h3 className="font-medium text-gray-900">Thumbnail Tips</h3>
-                <ul className="text-sm text-gray-600 space-y-2">
+                <h3 className="font-medium dark:text-gray-100 text-gray-900">Thumbnail Tips</h3>
+                <ul className="text-sm dark:text-gray-400 text-gray-600 space-y-2">
                   <li>• Use high-quality images (1280x720 recommended)</li>
                   <li>• Choose an engaging frame from your video</li>
                   <li>• Avoid text-heavy thumbnails</li>
@@ -214,8 +214,8 @@ const VideoUpload = () => {
           </div>
 
           {/* Video Details Section */}
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+          <div className="bg-white dark:bg-primary-500 rounded-2xl shadow-lg p-8">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-6 flex items-center">
               <FileText className="h-6 w-6 mr-2 text-indigo-600" />
               Video Details
             </h2>
@@ -223,7 +223,7 @@ const VideoUpload = () => {
             <div className="grid md:grid-cols-2 gap-6">
               {/* Title */}
               <div className="md:col-span-2">
-                <label className="block text-sm font-medium text-gray-700 mb-2">Title *</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Title *</label>
                 <input
                   type="text"
                   value={formData.title}
@@ -241,7 +241,7 @@ const VideoUpload = () => {
 
               {/* Description */}
               <div className="md:col-span-2">
-                <label className="block text-sm font-medium text-gray-700 mb-2">Description *</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Description *</label>
                 <textarea
                   value={formData.description}
                   onChange={(e) => setFormData((prev) => ({ ...prev, description: e.target.value }))}
@@ -266,15 +266,15 @@ const VideoUpload = () => {
                     onChange={(e) => setFormData((prev) => ({ ...prev, controls: e.target.checked }))}
                     className="w-5 h-5 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
                   />
-                  <span className="text-sm font-medium text-gray-700">Show video controls (play, pause, volume, etc.)</span>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Show video controls (play, pause, volume, etc.)</span>
                 </label>
               </div>
             </div>
           </div>
 
           {/* Transformation Settings */}
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+          <div className="bg-white dark:bg-primary-500 rounded-2xl shadow-lg p-8">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-6 flex items-center">
               <Settings className="h-6 w-6 mr-2 text-indigo-600" />
               Transformation Settings
             </h2>
@@ -282,7 +282,7 @@ const VideoUpload = () => {
             <div className="space-y-6">
               {/* Dimension Presets */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-3">Video Dimensions</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Video Dimensions</label>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                   {dimensionPresets.map((preset) => (
                     <button
@@ -300,7 +300,7 @@ const VideoUpload = () => {
                           }));
                         }
                       }}
-                      className={`p-3 text-sm font-medium rounded-lg border transition-colors ${formData.transformation.width === preset.width && formData.transformation.height === preset.height ? "border-indigo-500 bg-indigo-50 text-indigo-700" : "border-gray-300 hover:border-indigo-300 text-gray-700"}`}
+                      className={`p-3 text-sm font-medium rounded-lg border transition-colors ${formData.transformation.width === preset.width && formData.transformation.height === preset.height ? "border-indigo-500 bg-indigo-50 text-indigo-700" : "border-gray-300 hover:border-indigo-300 text-gray-700 dark:text-gray-300"}`}
                     >
                       {preset.name}
                     </button>
@@ -311,7 +311,7 @@ const VideoUpload = () => {
               {/* Custom Dimensions */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Width (px)</label>
+                  <label className="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-2">Width (px)</label>
                   <input
                     type="number"
                     value={formData.transformation.width}
@@ -331,7 +331,7 @@ const VideoUpload = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Height (px)</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Height (px)</label>
                   <input
                     type="number"
                     value={formData.transformation.height}
@@ -353,7 +353,7 @@ const VideoUpload = () => {
 
               {/* Quality Slider */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Quality: {formData.transformation.quality}%</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Quality: {formData.transformation.quality}%</label>
                 <input
                   type="range"
                   min="1"
@@ -368,9 +368,9 @@ const VideoUpload = () => {
                       },
                     }))
                   }
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                  className="w-full h-2 bg-gray-200 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer slider"
                 />
-                <div className="flex justify-between text-xs text-gray-500 mt-1">
+                <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
                   <span>Low Quality</span>
                   <span>High Quality</span>
                 </div>
@@ -388,7 +388,7 @@ const VideoUpload = () => {
           <div className="flex justify-end space-x-4">
             <button
               type="button"
-              className="px-8 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+              className="px-8 py-3 border dark:bg-gray-300 border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
               onClick={() => window.history.back()}
             >
               Cancel
