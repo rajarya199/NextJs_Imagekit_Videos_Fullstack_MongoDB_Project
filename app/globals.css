@@ -31,8 +31,8 @@ body {
 
 @theme{
   --color-primary-500:#050F17;
-  --color-primary-900:#141828,
-  --color-primary-600:#215974
+  --color-primary-900:#141828;
+  --color-primary-600:#215974;
 
 }
 @utility wrapper{
