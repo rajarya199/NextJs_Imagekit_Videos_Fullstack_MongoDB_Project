@@ -6,12 +6,16 @@ import Link from 'next/link'
 import Button from './Button'
 import ThemeSwitcher from './ThemeSwitcher'
 import { menuItem } from '@/constants'
+import { useSession, signOut } from "next-auth/react"
+
+ 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
-
+ const { data: session, status } = useSession()
+  const isLoggedIn = status === "authenticated"
   return (
     <nav className=" shadow-sm sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 dark:bg-gradient-to-b dark:from-gray-900 dark:to-black  backdrop-blur-md  border-b border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,12 +43,19 @@ const Navbar = () => {
           <div className="flex items-center space-x-4">
             {/* Desktop buttons */}
             <div className="hidden md:flex items-center space-x-2">
-              <Link href="/login">
-                <Button variant="outline">Login</Button>
-              </Link>
-              <Link href="/register">
-                <Button>Sign Up</Button>
-              </Link>
+              {isLoggedIn ? (
+                      <Button onClick={() => signOut({ callbackUrl: '/login' })}>Log Out</Button>
+
+              ) : (
+                <>
+                  <Link href="/login">
+                    <Button variant="outline">Login</Button>
+                  </Link>
+                  <Link href="/register">
+                    <Button>Sign Up</Button>
+                  </Link>
+                </>
+              )}
             </div>
 
             {/* Theme Switcher */}
@@ -81,12 +92,19 @@ const Navbar = () => {
             ))}
            
             <div className="flex flex-col space-y-2 px-3 py-2">
-              <Link href="/login">
-                <Button variant="outline">Login</Button>
-              </Link>
-              <Link href="/register">
-                <Button>Sign Up</Button>
-              </Link>
+               {isLoggedIn ? (
+                      <Button onClick={() => signOut({ callbackUrl: '/login' })}>LogOut</Button>
+
+              ) : (
+                <>
+                  <Link href="/login">
+                    <Button variant="outline">Login</Button>
+                  </Link>
+                  <Link href="/register">
+                    <Button>Sign Up</Button>
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>
