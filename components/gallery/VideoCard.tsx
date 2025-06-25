@@ -24,7 +24,7 @@ const VideoCard: React.FC<VideoCardProps> = ({
 
   return (
     <Link href={`/video/${video._id}`} passHref>
-      <div className="dark:bg-primary-600 border border-gray-100 dark:border-gray-700 rounded-lg shadow-md overflow-hidden flex flex-col cursor-pointer transition-transform duration-200 hover:scale-105"
+      <div className="dark:bg-primary-500 border border-gray-100 dark:border-gray-700 rounded-lg shadow-md overflow-hidden flex flex-col cursor-pointer transition-transform duration-200 hover:scale-105"
     
      onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
