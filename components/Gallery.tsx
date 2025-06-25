@@ -70,7 +70,7 @@ export default function Gallery() {
           {videos.map((video) => (
             <div
               key={video.id}
-              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              className="group bg-white  dark:bg-primary-500 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className="relative aspect-video overflow-hidden">
                 <img
@@ -94,11 +94,11 @@ export default function Gallery() {
               </div>
 
               <div className="p-6">
-                <h3 className="font-semibold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-3 group-hover:text-purple-600 transition-colors">
                   {video.title}
                 </h3>
                 
-                <div className="flex items-center justify-between text-sm text-gray-500">
+                <div className="flex items-center justify-between text-sm dark:text-gray-400 text-gray-500">
                   <div className="flex items-center space-x-4">
                     <div className="flex items-center space-x-1">
                       <Eye className="w-4 h-4" />
@@ -109,7 +109,7 @@ export default function Gallery() {
                       <span>{video.likes}</span>
                     </div>
                   </div>
-                  <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                  <button className="p-2 hover:bg-gray-100  dark:hover:bg-gray-700 rounded-full transition-colors">
                     <Share2 className="w-4 h-4" />
                   </button>
                 </div>
