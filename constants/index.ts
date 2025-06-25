@@ -7,14 +7,18 @@ export const menuItem=[
         label:'Gallery',
         path:'/gallery'
     },
+      {
+        label:"Upload",
+        path:"/upload"
+    },
      {
         label:"Features",
         path:"/"
     },
-     {
-        label:"Pricing",
-        path:"/"
-    },
+    //  {
+    //     label:"Pricing",
+    //     path:"/"
+    // },
      {
         label:"About",
         path:"/"
