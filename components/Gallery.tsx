@@ -1,5 +1,6 @@
 import React from 'react';
 import { Play, Heart, Share2, Eye } from 'lucide-react';
+import Image from 'next/image';
 
 const videos = [
   {
@@ -73,9 +74,10 @@ export default function Gallery() {
               className="group bg-white  dark:bg-primary-500 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className="relative aspect-video overflow-hidden">
-                <img
+                <Image
                   src={video.thumbnail}
                   alt={video.title}
+                  fill
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
