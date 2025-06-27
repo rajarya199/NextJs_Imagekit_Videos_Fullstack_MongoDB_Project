@@ -11,6 +11,7 @@ import {
 import Button from './Button'
 import { useTheme } from 'next-themes'
 import VideoPreview from './VideoPreview'
+import Link from 'next/link'
 const HeroSection = () => {
   const { theme } = useTheme()
   return (
@@ -47,10 +48,13 @@ const HeroSection = () => {
             </p>
             <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg">
+                <Link href={'/upload'}>
+                  <Button size="lg">
                   <UploadIcon className="mr-2 h-5 w-5" />
                   Upload Video
                 </Button>
+                </Link>
+              
                 <Button variant="outline" size="lg">
                   Explore Features
                 </Button>

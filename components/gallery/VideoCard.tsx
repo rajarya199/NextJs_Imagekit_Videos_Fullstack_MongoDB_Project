@@ -1,6 +1,7 @@
 "use client"
 import React,{useState} from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 interface Video {
   _id: string;
   title: string;
@@ -31,11 +32,12 @@ const VideoCard: React.FC<VideoCardProps> = ({
     >
       <div className='relative w-full h-[250px]'>
         {!isHovered ? (
-           <img
+           <Image
             src={video.thumbnailUrl}
             alt={video.title}
             className="w-full h-full object-cover"
             loading="lazy"
+            fill
           />
         ):(
            <video
