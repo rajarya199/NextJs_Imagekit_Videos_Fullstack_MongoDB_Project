@@ -1,5 +1,5 @@
 "use client";
-import { apiClient } from "@/lib/api-client";
+// import { apiClient } from "@/lib/api-client";
 import React, { useState } from "react";
 import {
   Video,
@@ -74,18 +74,18 @@ const VideoUpload = () => {
     if (!validateForm()) return;
 
     setIsSubmitting(true);
-  const payload: VideoFormData = {
-    title: formData.title,
-    description: formData.description,
-    videoUrl: formData.videoUrl!,
-    thumbnailUrl: formData.thumbnailUrl!,
-    controls: formData.controls,
-    transformation: {
-      width: formData.transformation.width,
-      height: formData.transformation.height,
-      quality: formData.transformation.quality,
-    },
-  };
+  // const payload: VideoFormData = {
+  //   title: formData.title,
+  //   description: formData.description,
+  //   videoUrl: formData.videoUrl!,
+  //   thumbnailUrl: formData.thumbnailUrl!,
+  //   controls: formData.controls,
+  //   transformation: {
+  //     width: formData.transformation.width,
+  //     height: formData.transformation.height,
+  //     quality: formData.transformation.quality,
+  //   },
+  // };
     try {
       // await apiClient.createVideo(payload)
       const res = await fetch("/api/video", {

@@ -72,7 +72,7 @@ const LoginPage = () => {
             >Login</button>
 </form>
    <p className="mt-6 text-center text-sm text-gray-600">
-            Don't have an account? 
+  Don&apos;t have an account?{' '}
                     <button className="font-medium text-blue-600 hover:text-blue-500 focus:outline-none focus:underline transition-colors duration-200" onClick={() => router.push("/register")}> Register </button>
 
        
